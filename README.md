@@ -1,7 +1,7 @@
 # Attack-Log-parser
 
 ## How to run
-`python attack_interpreter [JSON_ATTACK_LOG]`
+`python attack_interpreter [JSON_ATTACKS_LOG]`
 
 ## Menu functions
 	1. Show Attackers
