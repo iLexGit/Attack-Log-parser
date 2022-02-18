@@ -14,7 +14,9 @@
 | *Show Attack from IP* | asks for IP and lists all attacks performed with logs, timestamps and severity levels |
 
 ## TODO
-- [ ] Sort attackers array
+- [ ] Consider migrating to *Golang* (defo faster)
+- [x] Beautify log output
+- [ ] Sort attackers array (make sure its fastest)
 - [ ] Add functionality to read and parse regular (non-attack) logs
 - [ ] Allow RegEx testing
 - [ ] Ask if output to file rather than work on CLI
