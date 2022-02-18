@@ -20,3 +20,4 @@
 - [ ] Add functionality to read and parse regular (non-attack) logs
 - [ ] Allow RegEx testing
 - [ ] Ask if output to file rather than work on CLI
+- [ ] Add more stats
