@@ -98,7 +98,7 @@ def regexAttack(attack, regex):
             break
 
 def printHelp():
-    print("Log parser v1\nAlejandro Marti, Lupovis\nhttps://github.com/iLexGit/Attack-Log-parser\n")
+    print("Log parser v1\nAlejandro Marti, Lupovis\nhttps://github.com/iLexGit/logParser\n")
     print("Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]\n")
     print("[TYPE OF LOG]\n\t-A\t\tAttacks log\n\t-L\t\tRegular log\n")
     print("[ATTACK LOG OPTIONS]\n")
