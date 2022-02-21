@@ -4,9 +4,9 @@
 `python attack_interpreter [JSON_ATTACKS_LOG]`
 
 ## Help Menu
-Log parser v1.01
-Alejandro Marti, Lupovis
-https://github.com/iLexGit/logParser
+Log parser v1.01 
+Alejandro Marti, Lupovis 
+https://github.com/iLexGit/logParser 
 
 Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
 
