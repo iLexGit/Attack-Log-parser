@@ -5,9 +5,9 @@ attacks = []
 attackers = []
 
 class Attacker:
-    def __init__(self, ip, reqs):
+    def __init__(self, ip, attacks):
         self.ip = ip
-        self.reqs = reqs
+        self.attacks = attacks
 
 class Attack:
     def __init__(self, src, dst, logs):
@@ -17,7 +17,10 @@ class Attack:
 
 def main():
     
-    if sys.argv[1] == "-A":
+    if len(sys.argv) < 2:
+        printHelp()
+
+    elif sys.argv[1] == "-A":
         file = json.load(loadAttacks())
         
         for entry in file:
@@ -28,7 +31,7 @@ def main():
             if index == 0:
                 attackers.append(Attacker(attack.src, 1))
             else:
-                attackers[index].reqs+=1
+                attackers[index].attacks+=1
         
         if sys.argv[3] == "-l":
             listAttackers()
@@ -36,9 +39,9 @@ def main():
         elif (sys.argv[3] == "-s") and (len(sys.argv) > 4):
             showAttack(sys.argv[4])
         
-        elif (sys.argv[3]) == "-r" and (len(sys.argv) > 4):
+        elif ((sys.argv[3]) == "-r" or sys.argv[3] == "-ru") and (len(sys.argv) > 4):
             for attack in attacks:
-                regexAttack(attack, sys.argv[4])
+                regexAttack(attack, sys.argv[4], sys.argv[3]=='-ru')
 
         else:
             printHelp()
@@ -70,14 +73,14 @@ def isUnique(src):
 def listAttackers():
     print("\t#", "\tIP")
     for attacker in attackers:
-        print("\t", attacker.reqs, "\t", attacker.ip)
+        print("\t", attacker.attacks, "\t", attacker.ip)
 
 def showAttack(ip):
     index=0
-    if len(sys.argv) > 6 and sys.argv[5] == "-r":
+    if len(sys.argv) > 6 and (sys.argv[5] == "-r" or sys.argv[5] == "-ru"):
         for attack in attacks:
             if attack.src == ip:
-                regexAttack(attack, sys.argv[6])
+                regexAttack(attack, sys.argv[6], sys.argv[5] == "-ru")
 
     else:
         for attack in attacks:
@@ -87,24 +90,35 @@ def showAttack(ip):
                 for i in range(len(attack.logs)):
                     print("\t\t", attack.logs[i]["time"], "\t[", attack.logs[i]["parsedMessage"]["level"], "]", "\n\t", attack.logs[i]["parsedMessage"]["message"][attack.logs[i]["parsedMessage"]["message"].index("\""):], "\n")
 
-def regexAttack(attack, regex):
+def regexAttack(attack, regex, unique):
     x = "-"
-    for i in range(len(attack.logs)):
-        x = (re.findall(regex, attack.logs[i]["parsedMessage"]["message"][attack.logs[i]["parsedMessage"]["message"].index("\""):]))
-        if len(x) > 0:
-            print("\nSource", attack.src, "->", attack.dst)
-            for p in range(len(attack.logs)):
-                print("\t", attack.logs[p]["parsedMessage"]["message"][attack.logs[p]["parsedMessage"]["message"].index("\""):])
-            break
+    if not unique:
+        for i in range(len(attack.logs)):
+            x = (re.findall(regex, attack.logs[i]["parsedMessage"]["message"][attack.logs[i]["parsedMessage"]["message"].index("\""):]))
+            if len(x) > 0:
+                print("ATTACK", attack.src, "->", attack.dst)
+                for p in range(len(attack.logs)):
+                    print("\t", attack.logs[p]["parsedMessage"]["message"][attack.logs[p]["parsedMessage"]["message"].index("\""):])
+                break
+    else:
+        first = True
+        for i in range(len(attack.logs)):
+            x = (re.findall(regex, attack.logs[i]["parsedMessage"]["message"][attack.logs[i]["parsedMessage"]["message"].index("\""):]))
+            if len(x) > 0:
+                if first:
+                    print("ATTACK", attack.src, "->", attack.dst)
+                print("\t", attack.logs[i]["parsedMessage"]["message"][attack.logs[i]["parsedMessage"]["message"].index("\""):])
+                first = False
 
 def printHelp():
-    print("Log parser v1\nAlejandro Marti, Lupovis\nhttps://github.com/iLexGit/logParser\n")
+    print("Log parser v1.01\nAlejandro Marti, Lupovis\nhttps://github.com/iLexGit/logParser\n")
     print("Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]\n")
     print("[TYPE OF LOG]\n\t-A\t\tAttacks log\n\t-L\t\tRegular log\n")
     print("[ATTACK LOG OPTIONS]\n")
     print("\t-l\t\tList source IP with number of attacks performed")
     print("\t-s <IP>\t\tPrint all logs from specified source IP")
-    print("\t-r <RegEx> \tPrint matching logs with regular expression")
+    print("\t-r <RegEx>\tPrint all logs from attack with a matching payload")
+    print("\t-ru <RegEx>\tPrint only matching logs")
 
 if __name__ == "__main__":
     main()
