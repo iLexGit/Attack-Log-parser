@@ -6,7 +6,7 @@
 ## Help Menu
 Log parser v1
 Alejandro Marti, Lupovis
-https://github.com/iLexGit/Attack-Log-parser
+https://github.com/iLexGit/logParser
 
 Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
 
