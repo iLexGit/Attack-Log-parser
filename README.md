@@ -3,15 +3,22 @@
 ## How to run
 `python attack_interpreter [JSON_ATTACKS_LOG]`
 
-## Menu functions
-	1. Show Attackers
-	2. Show Attack from IP
-	e. Exit
+## Help Menu
+Log parser v1
+Alejandro Marti, Lupovis
+https://github.com/iLexGit/Attack-Log-parser
 
-| **OPTION** | **ACTION** |
-| :--- | ---: |
-| *Show Attackers* | lists attacks source IP with the amount of attacks each one performed |
-| *Show Attack from IP* | asks for IP and lists all attacks performed with logs, timestamps and severity levels |
+Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
+
+[TYPE OF LOG]
+	-A		Attacks log
+	-L		Regular log
+
+[ATTACK LOG OPTIONS]
+
+	-l		List source IP with number of attacks performed
+	-s <IP>		Print all logs from specified source IP
+	-r <RegEx> 	Print matching logs with regular expression
 
 ## TODO
 - [ ] Consider migrating to *Golang* (defo faster)
