@@ -16,7 +16,7 @@
 ## TODO
 - [ ] Consider migrating to *Golang* (defo faster)
 - [x] Beautify log output
-- [ ] Sort attackers array (make sure its fastest)
+- [ ] Sort attackers array (make sure its fastest sortin method)
 - [ ] Add functionality to read and parse regular (non-attack) logs
 - [ ] Allow RegEx testing
 - [ ] Ask if output to file rather than work on CLI
