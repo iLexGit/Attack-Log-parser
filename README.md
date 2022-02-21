@@ -21,4 +21,4 @@
 - [ ] Allow RegEx testing
 - [ ] Ask if output to file rather than work on CLI
 - [ ] Add more stats
-- [ ] Replace menu with flag options and implement *-h*
+- [x] Replace menu with flag options and implement *-h*
