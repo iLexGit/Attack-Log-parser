@@ -111,7 +111,7 @@ def regexAttack(attack, regex, unique):
                 first = False
 
 def printHelp():
-    print("Log parser v1.01\nAlejandro Marti, Lupovis\nhttps://github.com/iLexGit/logParser\n")
+    print("\nLog parser v1.01\nAlejandro Marti (g3n3SYS), Lupovis\nhttps://github.com/iLexGit/logParser\n")
     print("Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]\n")
     print("[TYPE OF LOG]\n\t-A\t\tAttacks log\n\t-L\t\tRegular log\n")
     print("[ATTACK LOG OPTIONS]\n")
