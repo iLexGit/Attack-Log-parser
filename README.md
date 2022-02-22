@@ -30,5 +30,5 @@ Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
 - [ ] Ask if output to file rather than work on CLI
 - [ ] Add more stats
 - [x] Replace menu with flag options and implement *-h*
-- [ ] Add functionality to match logs againts  project
+- [ ] Add functionality to match logs againts [attackDB](https://github.com/iLexGit/attackDB) project
 - [ ] Create dependency to also clone [attackDB](https://github.com/iLexGit/attackDB) when cloning this project
