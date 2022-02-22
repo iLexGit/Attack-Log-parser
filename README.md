@@ -27,7 +27,6 @@ Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
 - [ ] Sort attackers array (make sure its fastest sortin method)
 - [ ] Add functionality to read and parse regular (non-attack) logs
 - [x] Allow RegEx testing
-- [ ] Ask if output to file rather than work on CLI
 - [ ] Add more stats
 - [x] Replace menu with flag options and implement *-h*
 - [ ] Add functionality to match logs againts [attackDB](https://github.com/iLexGit/attackDB) project
