@@ -1,4 +1,4 @@
-# Attack log parser
+# Log parser
 
 ## How to run
 `python attack_interpreter [JSON_ATTACKS_LOG]`
