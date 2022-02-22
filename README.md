@@ -21,7 +21,7 @@ Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
 	-s <IP>		Print all logs from specified source IP
 	-r <RegEx>	Print all logs from attack with a matching payload
 	-ru <RegEx>	Print only matching logs
-## TODO
+## Future Improvements
 - [ ] Consider migrating to *Golang* (defo faster)
 - [x] Beautify log output
 - [ ] Sort attackers array (make sure its fastest sortin method)
@@ -30,3 +30,5 @@ Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
 - [ ] Ask if output to file rather than work on CLI
 - [ ] Add more stats
 - [x] Replace menu with flag options and implement *-h*
+- [ ] Add functionality to match logs againts  project
+- [ ] Create dependency to also clone [attackDB](https://github.com/iLexGit/attackDB) when cloning this project
