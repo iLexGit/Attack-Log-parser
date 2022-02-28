@@ -1,14 +1,13 @@
 # Log parser
 
 ## How to run
-`python attack_interpreter [JSON_ATTACKS_LOG]`
+`python attack_interpreter [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]`
 
 ## Help Menu
+```
 Log parser v1.01\
 Alejandro Marti, Lupovis\ 
 https://github.com/iLexGit/logParser 
-
-Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
 
 [TYPE OF LOG]
 
@@ -21,6 +20,8 @@ Usage: python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]
 	-s <IP>		Print all logs from specified source IP
 	-r <RegEx>	Print all logs from attack with a matching payload
 	-ru <RegEx>	Print only matching logs
+
+```
 ## Future Improvements
 - [ ] Consider migrating to *Golang* (defo faster)
 - [x] Beautify log output
