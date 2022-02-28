@@ -5,8 +5,8 @@
 
 ## Help Menu
 ```
-Log parser v1.01\
-Alejandro Marti, Lupovis\ 
+Log parser v1.01
+Alejandro Marti, g3n3SYS
 https://github.com/iLexGit/logParser 
 
 [TYPE OF LOG]
