@@ -1,7 +1,7 @@
 # Log parser
 
 ## How to run
-`python attack_interpreter [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]`
+`python logParser.py [TYPE OF LOG] <LOG_FILE_PATH> [OPTIONS]`
 
 ## Help Menu
 ```
