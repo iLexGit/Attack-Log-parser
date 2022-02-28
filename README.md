@@ -30,5 +30,5 @@ https://github.com/iLexGit/logParser
 - [x] Allow RegEx testing
 - [ ] Add more stats
 - [x] Replace menu with flag options and implement *-h*
-- [ ] Add functionality to match logs againts [attackDB](https://github.com/iLexGit/attackDB) project
-- [ ] Create dependency to also clone [attackDB](https://github.com/iLexGit/attackDB) when cloning this project
+- [ ] Add functionality to match logs againts [attackDB](https://github.com/Lupovis/attackDB) project
+- [ ] Create dependency to also clone [attackDB](https://github.com/Lupovis/attackDB) when cloning this project
