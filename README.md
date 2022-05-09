@@ -31,7 +31,7 @@ https://github.com/iLexGit/logParser
 - [ ] Consider migrating to *Golang* (defo faster)
 - [x] Beautify log output
 - [ ] Sort attackers array (make sure its fastest sortin method)
-- [ ] Add functionality to read and parse regular (non-attack) logs
+- [x] Add functionality to read and parse regular (non-attack) logs
 - [x] Allow RegEx testing
 - [ ] Add more stats
 - [x] Replace menu with flag options and implement *-h*
