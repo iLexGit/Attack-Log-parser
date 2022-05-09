@@ -16,10 +16,15 @@ https://github.com/iLexGit/logParser
 
 [ATTACK LOG OPTIONS]
 
-	-l		List source IP with number of attacks performed
+	-l		List source IPs with number of attacks performed
 	-s <IP>		Print all logs from specified source IP
-	-r <RegEx>	Print all logs from attack with a matching payload
-	-ru <RegEx>	Print only matching logs
+	-r <RegEx>	Print logs from attack with a matching payload
+	-ra <RegEx>	Print all logs from attack with one or more matching payloads
+
+[REGULAR LOG OPTIONS]
+	-l		List source IPs with number of packets sent
+	-s <IP>	Print all logs from specified source IP
+
 
 ```
 ## Future Improvements
