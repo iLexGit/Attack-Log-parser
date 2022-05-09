@@ -23,7 +23,7 @@ https://github.com/iLexGit/logParser
 
 [REGULAR LOG OPTIONS]
 	-l		List source IPs with number of packets sent
-	-s <IP>	Print all logs from specified source IP
+	-s <IP>		Print all logs from specified source IP
 
 
 ```
